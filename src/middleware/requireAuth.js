@@ -1,5 +1,6 @@
 const {verifyAccess} = require('../utils/jwt');
 
+
 // If using cookie-based access token:
 module.exports = function requireAuth(req, res, next) {
     const token = req.cookies?.accessToken;
