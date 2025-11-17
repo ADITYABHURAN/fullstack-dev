@@ -11,6 +11,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      MONGODB_URL: mongodb://127.0.0.1:27017/testdb
+      JWT_ACCESS_SECRET: test_secret_key
+      JWT_REFRESH_SECRET: test_refresh_secret
+      NODE_ENV: test
+      PORT: 8000
+
     services:
       mongo:
         image: mongo:latest
